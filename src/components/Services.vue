@@ -17,10 +17,10 @@
               <p class="card-text text-white-50">
                 {{ service.description }}
               </p>
-              <div class="star-rating mt-auto">
+              <!-- <div class="star-rating mt-auto">
                 <i v-for="n in 4" :key="n" class="bi bi-star-fill"></i>
                 <i class="bi bi-star-half"></i>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

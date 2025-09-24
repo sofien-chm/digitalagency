@@ -10,6 +10,7 @@ import LetsTalk from '../components/LetsTalk.vue';
 import Signup from '../components/Signup.vue';
 import Login from '../components/Login.vue';
 import dashbord from '../components/DashbordBo.vue';
+import AddProject from '../components/AddProject.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/signup', component: Signup },
   { path: '/login', component: Login },
   { path: "/dashbord", component: dashbord, meta: { requiresAuth: true } },
+  { path: "/addproject", component: AddProject, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({

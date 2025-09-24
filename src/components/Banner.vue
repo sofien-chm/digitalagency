@@ -2,13 +2,14 @@
   <section class="banner-section py-5 container">
     <div class="row align-items-center">
 <div class="col-lg-6">
-      <span class="badge rounded-pill bg-primary mb-3 fs-6 px-3 py-2">JENNA ORTEGA</span>
-      <h1 class="fw-bold display-3 text-white mb-2">HAY! I'M JENNA</h1>
-      <h2 class="fw-bold display-5" style="color:#2196f3;">I'M A DEV|</h2>
+      <h1 class="fw-bold display-6 text-white mb-2">HEY! WE'RE WEB DEVELOPERS</h1>
+      <h2 class="fw-bold display-5" style="color:#2196f3; font-size:26px;">BUILDING DIGITAL SOLUTIONS</h2>
       <p class="text-light mt-4 fs-5" style="max-width: 500px;">
-        Yet bed any for travelling assistance indulgence unpleasing.<br>
-        Not thoughts all exercise blessing.<br>
-        Indulgence way everything joy alteration boisterous the attachment.
+        With a combined experience of 14 years in web development,<br>
+        we specialize in crafting modern, effective websites and web applications.<br>
+        From WordPress to Vue.js, Angular, .NET, Drupal, and PrestaShop,
+         deliver results that help freelancers and businesses grow.<br>
+         Let us turn your ideas into reality with creative and reliable web solutions.
       </p>
     </div>
     <div class="col-lg-6 banner-pic position-relative">

@@ -16,14 +16,19 @@
     <div class="content-area flex-fill d-flex flex-column">
       <header class="dashboard-topbar d-flex justify-content-between align-items-center p-3 border-bottom bg-white">
         <button class="btn btn-link"><i class="bi bi-list"></i></button>
-        <div class="profile d-flex align-items-center">
-              <button @click="logout">Log Out</button>
-
-          <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Anna Adame" class="rounded-circle me-2" width="36" height="36" />
-          <div>
-            <div class="fw-bold">Anna Adame</div>
-            <div class="small text-muted">Founder</div>
+        <div class="profile-menu-wrapper" style="position: relative;">
+          <div class="profile d-flex align-items-center" @click="toggleProfileMenu">
+            <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Anna Adame" class="rounded-circle me-2" width="36" height="36" style="cursor:pointer;" />
+            <div>
+              <div class="fw-bold" style="cursor:pointer;">Anna Adame</div>
+              <div class="small text-muted" style="cursor:pointer;">Founder</div>
+            </div>
           </div>
+          <transition name="fade">
+            <div v-if="showProfileMenu" class="profile-dropdown shadow rounded">
+              <button @click="logout" class="btn btn-logout w-100">Log Out</button>
+            </div>
+          </transition>
         </div>
       </header>
       <main class="flex-fill bg-dashboard"></main>
@@ -36,12 +41,16 @@
 <script>
 import { getAuth, signOut } from "firebase/auth";
 import { useRouter } from 'vue-router';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
   setup() {
     const auth = getAuth();
     const router = useRouter();
-
+    const showProfileMenu = ref(false);
+    const toggleProfileMenu = () => {
+      showProfileMenu.value = !showProfileMenu.value;
+    };
     const logout = () => {
       signOut(auth)
         .then(() => {
@@ -53,8 +62,20 @@ export default {
           console.error("Error signing out:", error);
         });
     };
-
-    return { logout };
+    // click-outside logic
+    const handleClickOutside = (event) => {
+      const menu = document.querySelector('.profile-menu-wrapper');
+      if (menu && !menu.contains(event.target)) {
+        showProfileMenu.value = false;
+      }
+    };
+    onMounted(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+    });
+    onBeforeUnmount(() => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    });
+    return { showProfileMenu, toggleProfileMenu, logout  };
   },
 };
 </script>
@@ -84,5 +105,41 @@ export default {
 .sidebar-link:hover { color: #fff; }
 .bg-dashboard { background: #f7f7fb; height: 100%; }
 .profile img { border: 2px solid #e7eaf3; object-fit: cover; }
+
+
+
+/* ...existing styles... */
+.profile-menu-wrapper {
+  position: relative;
+}
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  min-width: 140px;
+  z-index: 11;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 10%);
+  padding: 8px;
+}
+.btn-logout {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background 0.2s;
+}
+.btn-logout:hover {
+  background: #d32f2f;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
 
 </style>
