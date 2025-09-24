@@ -12,17 +12,19 @@
 import { ref } from 'vue';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import { useRouter } from 'vue-router';
 
 const email = ref('');
 const password = ref('');
 const error = ref('');
+const router = useRouter();
 
 async function handleLogin() {
   error.value = '';
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
     console.log('Login success:', userCredential.user);
-    // Redirect or reset form here if needed
+    router.push('/');  // Redirect to home page on success
   } catch (err) {
     error.value = err.message;
   }

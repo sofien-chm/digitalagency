@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+    <router-view></router-view>
 
   <form @submit.prevent="handleSignup" class="auth-form">
     <h2>Sign Up</h2>

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import Home from '../components/Home.vue';
 import AboutMe from '../components/AboutMe.vue';
@@ -8,6 +9,7 @@ import Contact from '../components/Contact.vue';
 import LetsTalk from '../components/LetsTalk.vue';
 import Signup from '../components/Signup.vue';
 import Login from '../components/Login.vue';
+import Dashbord from '../components/DashbordBo.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -18,11 +20,24 @@ const routes = [
   { path: '/letstalk', name: 'LetsTalk', component: LetsTalk },
   { path: '/signup', component: Signup },
   { path: '/login', component: Login },
+  { path: "/dashboard", component: Dashbord, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes
+});
+const auth = getAuth();
+
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const currentUser = auth.currentUser;
+
+  if (requiresAuth && !currentUser) {
+    next("/");
+  } else {
+    next();
+  }
 });
 
 export default router;

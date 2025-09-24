@@ -2,7 +2,7 @@
   <nav class="menu container">
     <div class="logo">AS</div>
     <ul>
-      <li><a href="#home">HOME</a></li>
+      <router-link to="/">HOME</router-link>
       <li><a href="#about">ABOUT ME</a></li>
       <li><a href="#services">SERVICES</a></li>
       <li><a href="#projects">PROJECTS</a></li>
