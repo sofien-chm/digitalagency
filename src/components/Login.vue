@@ -24,7 +24,7 @@ async function handleLogin() {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
     console.log('Login success:', userCredential.user);
-    router.push('/');  // Redirect to home page on success
+    router.push('/dashbord');  // Redirect to home page on success
   } catch (err) {
     error.value = err.message;
   }

@@ -9,7 +9,7 @@ import Contact from '../components/Contact.vue';
 import LetsTalk from '../components/LetsTalk.vue';
 import Signup from '../components/Signup.vue';
 import Login from '../components/Login.vue';
-import Dashbord from '../components/DashbordBo.vue';
+import dashbord from '../components/DashbordBo.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -20,7 +20,7 @@ const routes = [
   { path: '/letstalk', name: 'LetsTalk', component: LetsTalk },
   { path: '/signup', component: Signup },
   { path: '/login', component: Login },
-  { path: "/dashboard", component: Dashbord, meta: { requiresAuth: true } },
+  { path: "/dashbord", component: dashbord, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({
@@ -37,6 +37,15 @@ router.beforeEach((to, from, next) => {
     next("/");
   } else {
     next();
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User is logged in:", user);
+    // You can save user info in your Vue state management here if needed
+  } else {
+    console.log("User is logged out");
   }
 });
 

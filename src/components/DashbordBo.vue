@@ -17,6 +17,8 @@
       <header class="dashboard-topbar d-flex justify-content-between align-items-center p-3 border-bottom bg-white">
         <button class="btn btn-link"><i class="bi bi-list"></i></button>
         <div class="profile d-flex align-items-center">
+              <button @click="logout">Log Out</button>
+
           <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Anna Adame" class="rounded-circle me-2" width="36" height="36" />
           <div>
             <div class="fw-bold">Anna Adame</div>
@@ -31,9 +33,37 @@
     </div>
   </div>
 </template>
+<script>
+import { getAuth, signOut } from "firebase/auth";
+import { useRouter } from 'vue-router';
+
+export default {
+  setup() {
+    const auth = getAuth();
+    const router = useRouter();
+
+    const logout = () => {
+      signOut(auth)
+        .then(() => {
+          router.push("/");
+          console.log("User signed out successfully");
+          // Optionally redirect or update UI here
+        })
+        .catch((error) => {
+          console.error("Error signing out:", error);
+        });
+    };
+
+    return { logout };
+  },
+};
+</script>
 
 <style scoped>
 .dashboard { background: #f2f2f7; }
+.menu{
+  display: none !important;
+}
 .sidebar {
   background: #48568d;
   min-width: 250px;
@@ -54,4 +84,5 @@
 .sidebar-link:hover { color: #fff; }
 .bg-dashboard { background: #f7f7fb; height: 100%; }
 .profile img { border: 2px solid #e7eaf3; object-fit: cover; }
+
 </style>
