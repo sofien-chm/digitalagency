@@ -9,6 +9,7 @@
       <Projects id="projects" />
       <Contact id="contact" />
       <LetsTalk id="letstalk" />
+
     </main>
   </div>
 </template>

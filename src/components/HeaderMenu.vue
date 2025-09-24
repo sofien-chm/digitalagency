@@ -9,6 +9,8 @@
       <li><a href="#contact">CONTACT</a></li>
     </ul>
     <a href="#letstalk" class="lets-talk-btn">LET'S TALK</a>
+    <router-link to="/signup">Sign Up</router-link>
+
   </nav>
 </template>
 
