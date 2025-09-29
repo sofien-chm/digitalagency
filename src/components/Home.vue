@@ -1,12 +1,12 @@
 <template>
 <router-view /> 
-
   <div id="app">
     <Banner />
     <main>
       <AboutMe id="about" />
       <Services id="services" />
       <Projects id="projects" />
+      <Team id="team" />
       <Contact id="contact" />
     </main>
   </div>
@@ -18,6 +18,7 @@ import Banner from './Banner.vue';
 import AboutMe from './AboutMe.vue';
 import Services from './Services.vue';
 import Projects from './Projects.vue';
+import Team from './Team.vue';
 import Contact from './Contact.vue';
 </script>
 

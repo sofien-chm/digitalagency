@@ -27,8 +27,25 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-});
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const el = document.querySelector(to.hash);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            resolve({ el });
+          } else {
+            resolve({ top: 0 });
+          }
+        }, 300);
+      });
+    }
+    return savedPosition || { top: 0 };
+  },
+})
+
 const auth = getAuth();
 
 router.beforeEach((to, from, next) => {

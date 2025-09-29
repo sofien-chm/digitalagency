@@ -1,0 +1,76 @@
+{
+  "menu": {
+    "home": "ACCUEIL",
+    "aboutMe": "À PROPOS",
+    "services": "SERVICES",
+    "projects": "PROJETS",
+    "contact": "CONTACT",
+    "letsTalk": "PARLONS-EN"
+  },
+  "banner": {
+    "heading1": "HEY ! NOUS SOMMES DÉVELOPPEURS WEB",
+    "heading2": "CONSTRUISONS DES SOLUTIONS DIGITALES",
+    "paragraph1": "Avec une expérience combinée de 14 ans en développement web,",
+    "paragraph2": "nous sommes spécialisés dans la création de sites et applications web modernes et performants.",
+    "paragraph3": "De WordPress à Vue.js, Angular, .NET, Drupal et PrestaShop,",
+    "paragraph4": "nous fournissons des résultats aidant freelances et entreprises à croître.",
+    "paragraph5": "Laissez-nous transformer vos idées en réalité avec des solutions web créatives et fiables."
+  },
+  "about": {
+    "badge": "À PROPOS",
+    "heading": "NOUS SOMMES DISPONIBLES POUR",
+    "uiux": "UI/UX",
+    "PROJECTS": "PROJETS",
+    "paragraph": "Avec 14 ans d'expérience combinée, nous sommes spécialisés dans la création de solutions web personnalisées pour les entreprises et les entrepreneurs. De WordPress à Vue.js, Angular, .NET, Drupal et PrestaShop, nous livrons des sites et applications qui aident nos clients à réussir en ligne.",
+    "projectsDelivered": "Projets livrés",
+    "yearsExperience": "Années d'expérience",
+    "customIntegrations": "Intégrations personnalisées",
+    "getInTouch": "CONTACTEZ-NOUS"
+  },
+  "services": {
+    "badge": "SERVICES",
+    "heading_part1": "CE QUE NOUS",
+    "heading_part2": "OFFRONS",
+    "readMore": "Lire la suite",
+    "webDevelopment": {
+      "title": "Développement Web",
+      "point1": "Vue.js, Angular, .NET, WordPress, Drupal, PrestaShop",
+      "point2": "Applications web personnalisées",
+      "point3": "Solutions e-commerce"
+    },
+    "websiteDesign": {
+      "title": "Conception de sites Web",
+      "point1": "Design UI/UX moderne",
+      "point2": "Responsive et mobile-friendly",
+      "point3": "Branding personnalisé"
+    },
+    "maintenanceSupport": {
+      "title": "Maintenance et Support",
+      "point1": "Résolution rapide des problèmes",
+      "point2": "Mises à jour et améliorations de la sécurité",
+      "point3": "Conseil technique"
+    }
+  },
+  "project": {
+    "title": "PROJET RÉCENT",
+    "work": "MY WORK"
+  },
+  "contact": {
+    "title": "DISCUTONS DE VOTRE PROJET",
+    "description": "Toujours disponible pour le freelance si le bon projet se présente. N'hésitez pas à me contacter.",
+    "firstNameLabel": "PRÉNOM",
+    "firstNamePlaceholder": "Nom *",
+    "emailLabel": "VOTRE E-MAIL",
+    "emailPlaceholder": "E-mail *",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Sujet *",
+    "messageLabel": "VOTRE MESSAGE",
+    "messagePlaceholder": "Votre message *",
+    "sendButton": "ENVOYER LE MESSAGE"
+  },
+  "team": {
+    "team1": "ÉQUIPE",
+    "we": " QUI SOMMES",
+    "NOUS":"NOUS"
+  }
+}

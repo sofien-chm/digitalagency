@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "HOME",
+        "aboutMe": "ABOUT ME",
+        "services": "SERVICES",
+        "projects": "PROJECTS",
+        "contact": "CONTACT",
+        "letsTalk": "LET'S TALK"
+    },
+    "banner": {
+        "heading1": "HEY! WE'RE WEB DEVELOPERS",
+        "heading2": "BUILDING DIGITAL SOLUTIONS",
+        "paragraph1": "With a combined experience of 14 years in web development,",
+        "paragraph2": "we specialize in crafting modern, effective websites and web applications.",
+        "paragraph3": "From WordPress to Vue.js, Angular, .NET, Drupal, and PrestaShop,",
+        "paragraph4": "deliver results that help freelancers and businesses grow.",
+        "paragraph5": "Let us turn your ideas into reality with creative and reliable web solutions."
+    },
+    "about": {
+        "badge": "ABOUT US",
+        "heading": "WE ARE AVAILABLE FOR",
+        "uiux": "UI UX DESIGN",
+        "PROJECTS": "PROJECTS",
+        "paragraph": "With 14 years of combined experience, we specialize in building custom web solutions for businesses and entrepreneurs. From WordPress to Vue.js, Angular, .NET, Drupal, and PrestaShop, we deliver websites and applications that help our clients succeed online.",
+        "projectsDelivered": "Projects Delivered",
+        "yearsExperience": "Years Experience",
+        "customIntegrations": "Custom Integrations",
+        "getInTouch": "GET IN TOUCH"
+    },
+    "services": {
+        "badge": "SERVICES",
+        "heading_part1": "WHAT WE",
+        "heading_part2": "OFFER",
+        "readMore": "Read More",
+        "webDevelopment": {
+            "title": "Web Development",
+            "point1": "Vue.js, Angular, .NET, WordPress, Drupal, PrestaShop",
+            "point2": "Custom Web Applications",
+            "point3": "E-commerce Solutions"
+        },
+        "websiteDesign": {
+            "title": "Website Design",
+            "point1": "Modern UI/UX Design",
+            "point2": "Responsive & Mobile-Friendly",
+            "point3": "Custom Branding"
+        },
+        "maintenanceSupport": {
+            "title": "Maintenance & Support",
+            "point1": "Fast Issue Resolution",
+            "point2": "Updates & Security Improvements",
+            "point3": "Technical Consulting"
+        }
+    },
+    "project": {
+        "title": " RECENT PROJECTS",
+        "work": "MY WORK"
+    },
+    "contact": {
+        "title": "Let’s Discuss Your Project",
+        "description": "Always available for freelancing if the right project comes along. Feel free to contact me.",
+        "firstNameLabel": "FIRST NAME",
+        "firstNamePlaceholder": "Name *",
+        "emailLabel": "YOUR EMAIL",
+        "emailPlaceholder": "Email *",
+        "subjectLabel": "SUBJECT",
+        "subjectPlaceholder": "Subject *",
+        "messageLabel": "YOUR MESSAGE",
+        "messagePlaceholder": "Your message *",
+        "sendButton": "SEND MESSAGE"
+    },
+    "team": {
+        "team1": "TEAM",
+        "we": " WHO WE ",
+        "NOUS":"ARE"
+    }
+}

@@ -2,12 +2,14 @@
   <div class="dashboard d-flex min-vh-100">
     <!-- Sidebar -->
     <aside class="sidebar d-flex flex-column p-4">
-      <div class="sidebar-logo mb-4">AS</div>
+      <div class="sidebar-logo mb-4">
+              <router-link class="custom-link" to="/">AS</router-link>
+      </div>
       <div>
         <div class="sidebar-section mb-2">
           <span class="fw-semibold"><i class="bi bi-journal-text me-2"></i>Portfolio</span>
           <ul class="list-unstyled mt-2 ps-3">
-            <li><a href="#" class="sidebar-link">Add portfolio</a></li>
+  <a href="#" class="sidebar-link" @click.prevent="handleAddPortfolioClick">Add portfolio</a>
             <li><a href="#" class="sidebar-link">Show portfolio</a></li>
           </ul>
         </div>
@@ -20,7 +22,7 @@
           <div class="profile d-flex align-items-center" @click="toggleProfileMenu">
             <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Anna Adame" class="rounded-circle me-2" width="36" height="36" style="cursor:pointer;" />
             <div>
-              <div class="fw-bold" style="cursor:pointer;">Anna Adame</div>
+              <div class="fw-bold" style="cursor:pointer;"> {{ userName }}</div>
               <div class="small text-muted" style="cursor:pointer;">Founder</div>
             </div>
           </div>
@@ -31,7 +33,9 @@
           </transition>
         </div>
       </header>
-      <main class="flex-fill bg-dashboard"></main>
+      <main class="flex-fill bg-dashboard">
+          <AddProject v-if="showAddProject" />
+      </main>
       <footer class="dashboard-footer text-end text-muted p-2 small">
         2025 © Velzon. Design & Develop by Themesbrand
       </footer>
@@ -39,12 +43,20 @@
   </div>
 </template>
 <script>
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from 'vue-router';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import AddProject from './AddProject.vue'; // import your component
 
 export default {
+    components: { AddProject },
   setup() {
+    const showAddProject = ref(false);
+    const userName = ref(null);
+
+    const handleAddPortfolioClick = () => {
+      showAddProject.value = true;
+    };
     const auth = getAuth();
     const router = useRouter();
     const showProfileMenu = ref(false);
@@ -71,20 +83,26 @@ export default {
     };
     onMounted(() => {
       document.addEventListener('mousedown', handleClickOutside);
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          userName.value = user.displayName || user.email || "User";
+        } else {
+          userName.value = null;
+        }
+      });
     });
     onBeforeUnmount(() => {
       document.removeEventListener('mousedown', handleClickOutside);
     });
-    return { showProfileMenu, toggleProfileMenu, logout  };
+    return { showProfileMenu, toggleProfileMenu, logout, handleAddPortfolioClick, showAddProject, userName  };
   },
 };
 </script>
 
 <style scoped>
 .dashboard { background: #f2f2f7; }
-.menu{
-  display: none !important;
-}
+
 .sidebar {
   background: #48568d;
   min-width: 250px;

@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "HOME",
+        "aboutMe": "CHI SONO",
+        "services": "SERVIZI",
+        "projects": "PROGETTI",
+        "contact": "CONTATTO",
+        "letsTalk": "PARLIAMONE"
+    },
+    "banner": {
+        "heading1": "EHI! SIAMO SVILUPPATORI WEB",
+        "heading2": "CREIAMO SOLUZIONI DIGITALI",
+        "paragraph1": "Con un’esperienza combinata di 14 anni nello sviluppo web,",
+        "paragraph2": "siamo specializzati nella creazione di siti web e applicazioni moderne ed efficaci.",
+        "paragraph3": "Da WordPress a Vue.js, Angular, .NET, Drupal e PrestaShop,",
+        "paragraph4": "offriamo risultati che aiutano freelance e aziende a crescere.",
+        "paragraph5": "Lasciaci trasformare le tue idee in realtà con soluzioni web creative e affidabili."
+    },
+    "about": {
+        "badge": "SUL NOSTRO",
+        "heading": "Siamo disponibili per",
+        "uiux": "UI/UX",
+        "PROJECTS": "progetti di progettazione",
+        "paragraph": "Con 14 anni di esperienza combinata, ci specializziamo nella creazione di soluzioni web personalizzate per aziende e imprenditori. Da WordPress a Vue.js, Angular, .NET, Drupal e PrestaShop, offriamo siti web e applicazioni che aiutano i nostri clienti a avere successo online.",
+        "projectsDelivered": "Progetti consegnati",
+        "yearsExperience": "Anni di esperienza",
+        "customIntegrations": "Integrazioni personalizzate",
+        "getInTouch": "CONTATTACI"
+    },
+    "services": {
+        "badge": "SERVIZI",
+        "heading_part1": "QUELLO CHE OFFRIAMO",
+        "heading_part2": "",
+        "readMore": "Leggi di più",
+        "webDevelopment": {
+            "title": "Sviluppo Web",
+            "point1": "Vue.js, Angular, .NET, WordPress, Drupal, PrestaShop",
+            "point2": "Applicazioni web personalizzate",
+            "point3": "Soluzioni di e-commerce"
+        },
+        "websiteDesign": {
+            "title": "Progettazione di siti web",
+            "point1": "Design moderno UI/UX",
+            "point2": "Responsive e mobile-friendly",
+            "point3": "Branding personalizzato"
+        },
+        "maintenanceSupport": {
+            "title": "Manutenzione e Supporto",
+            "point1": "Risoluzione rapida dei problemi",
+            "point2": "Aggiornamenti e miglioramenti di sicurezza",
+            "point3": "Consulenza tecnica"
+        }
+    },
+    "project": {
+        "title": " PROGETTO RECENTE",
+        "work": "MES PROJETS"
+    },
+    "contact": {
+        "title": "DISCUSSIONE DEL TUO PROGETTO",
+        "description": "Sempre disponibile per freelance se arriva il progetto giusto. Non esitare a contattarmi.",
+        "firstNameLabel": "NOME",
+        "firstNamePlaceholder": "Nome *",
+        "emailLabel": "LA TUA EMAIL",
+        "emailPlaceholder": "Email *",
+        "subjectLabel": "OGGETTO",
+        "subjectPlaceholder": "Oggetto *",
+        "messageLabel": "IL TUO MESSAGGIO",
+        "messagePlaceholder": "Il tuo messaggio *",
+        "sendButton": "INVIA MESSAGGIO"
+    },
+    "team": {
+        "team1": "SQUADRA",
+        "we":"CHI ",
+        "NOUS":"SIAMO"
+    }
+}
